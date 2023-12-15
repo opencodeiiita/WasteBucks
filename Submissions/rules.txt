@@ -1,0 +1,6 @@
+Steps to followed to submit your work
+*Submit your work in the Submissions folder only.
+*Suppose your name is Ankit then submit it as Submissions/Ankit/Task1/username.txt and screenshot.
+*Write the Figma or Adobe XD link in the .txt file.
+*Remember to attach 📎 a screenshot/folder link of your work with your PR.
+*Point🥇 will only be awarded to the PR that is accepted.
