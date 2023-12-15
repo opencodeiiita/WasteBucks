@@ -63,7 +63,7 @@ We welcome your contributions. Please follow the below guidelines while contribu
 ## 🗒️Guidlines 
 Please help us follow the best practice to make it easy for the reviewer as well as the contributor. We want to focus on the code quality more than on managing pull request ethics.
 
-- Reference the issue numbers in the commit message if it resolves an open issue. Follow the pattern given in [PR_TEMPLATE.md](https://github.com/opencodeiiita/WasteBucks/blob/2ae7f6a11c9bc1649d671ae0cac1c3bd3c2ffb05/PR_TEMPLATE.md)
+- Reference the issue numbers in the commit message if it resolves an open issue. Follow the pattern given in [PR_TEMPLATE.md](https://github.com/opencodeiiita/WasteBucks/blob/f6221015a386d7168145bce3aad163f9bb6c1aaf/PR_TEMPLATE.md)
 
 - Provide the relevant screenshot for easier review.
 
