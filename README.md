@@ -22,7 +22,7 @@ This app promotes waste reduction and promotes eco-friendly products and practic
 - [Setting up Android Studio](https://developer.android.com/studio/install)
   
 ##  ✒Tech Stack Used
-* Flutter
+* Kotlin
 * Firebase
 * Figma
 * Adobe XD
