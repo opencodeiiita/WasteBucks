@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        tools:ignore="HardcodedText" />
+    <item android:title="Community"
+        android:id="@+id/community"
+        android:icon="@drawable/baseline_rss_feed_24"
+        tools:ignore="HardcodedText" />
+    <item android:title="Pickup"
+        android:id="@+id/pickup"
+        android:icon="@drawable/baseline_bus_alert_24"
+        tools:ignore="HardcodedText" />
+    <item android:title="Profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_person_24"
+        tools:ignore="HardcodedText" />
+</menu>
