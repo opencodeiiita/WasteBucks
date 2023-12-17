@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "115780088144",
+    "firebase_url": "https://wastebucks-a94e4-default-rtdb.firebaseio.com",
+    "project_id": "wastebucks-a94e4",
+    "storage_bucket": "wastebucks-a94e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115780088144:android:60d61cc3d7282389a4fc55",
+        "android_client_info": {
+          "package_name": "com.example.wastebucks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKfCbAmsusFZMVCQ-5Jc_85lICjOVs-uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

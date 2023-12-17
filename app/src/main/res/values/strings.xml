@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">WasteBucks</string>
+
+    <string name="heading_reg">Get Started</string>
+    <string name="subheading_reg">by creating a free account</string>
 </resources>
