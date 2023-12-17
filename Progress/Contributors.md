@@ -2,4 +2,4 @@
 
 - **Logo:** JackofAllCodez
 - **Splash Screen:** 
-- **Register Page Design:** Apoorv012
+- **Register Page Design Idea:** Apoorv012
