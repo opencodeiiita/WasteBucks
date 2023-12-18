@@ -2,6 +2,7 @@ package com.example.wastebucks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.wastebucks.databinding.ActivityMainBinding
 
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(Home())
@@ -21,7 +23,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.community -> replaceFragment(Community())
                 R.id.pickup -> replaceFragment(Pickup())
                 R.id.profile -> replaceFragment(Profile())
-
                 else -> {}
             }
             true

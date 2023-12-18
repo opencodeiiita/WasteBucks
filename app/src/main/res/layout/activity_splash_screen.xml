@@ -24,7 +24,8 @@
         android:layout_marginTop="200dp"
         android:layout_height="80dp"
         android:textSize="50sp"
-
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:text="@string/app_name" />
 
 </LinearLayout>
