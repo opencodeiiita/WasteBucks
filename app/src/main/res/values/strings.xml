@@ -5,14 +5,10 @@
     <string name="subheading_reg">by creating a free account</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="app_name">Page 1</string>
-    <string name="ek_img_content">ExportKit Image</string>
-    <string name="password_ek4_string">Password</string>
-    <string name="cooper_kristin_gmail_com_string">Cooper_Kristin@gmail.com</string>
+    <string name="password_string">Password</string>
     <string name="your_email_string">Your  Email</string>
     <string name="or_login_with_string">Or login with</string>
-    <string name="don_t_have_an_account__sign_up_string">Dont have an account? Sign up</string>
-    <string name="wastebucks_string">WasteBucks</string>
+    <string name="don_t_have_an_account__sign_up_string">Don\'t have an account?</string>
     <string name="welcome_back__string">Welcome Back!</string>
     <string name="login_ek3_string">Login</string>
 </resources>
