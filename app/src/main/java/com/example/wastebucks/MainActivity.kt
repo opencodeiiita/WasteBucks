@@ -17,6 +17,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragment(Home())
 
+        val actionBar = supportActionBar
+        actionBar?.apply {
+            setDisplayShowTitleEnabled(false)
+            setDisplayShowHomeEnabled(false)
+            setDisplayShowCustomEnabled(true)
+            setCustomView(R.layout.custom_actionbar)
+        }
+
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.home -> replaceFragment(Home())
