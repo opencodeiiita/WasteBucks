@@ -6,12 +6,396 @@
     android:background="@color/teal_200"
     tools:context=".Pickup">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/id1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="#f8f3f7">
+
+            <TextView
+                android:id="@+id/id2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="5:17"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/id3"
+                android:layout_width="23dp"
+                android:layout_height="17dp"
+                android:layout_marginEnd="9dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wifi" />
+
+            <ImageView
+                android:id="@+id/id4"
+                android:layout_width="23dp"
+                android:layout_height="17dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/battery" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="172dp"
+            android:layout_marginBottom="35dp"
+            android:text="PickUp"
+            android:textColor="#84c6c8"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/id6"
+            android:layout_width="325dp"
+            android:layout_height="82dp"
+            android:layout_marginHorizontal="26dp"
+            android:text="Did you know that more than 20% what goes in your househols bin can be recycled? For only 2$ a bag,we will collect your recyclables from your door, on demand.Recycling couldn't be easier!"
+            android:textColor="#000000"
+
+        <LinearLayout
+            android:id="@+id/id7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:paddingRight="201dp">
+
+            <TextView
+                android:id="@+id/id8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:paddingLeft="20dp"
+                android:text="What we collect"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginBottom="29dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/id10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="fitXY"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/SoftPlastic" />
+
+                <ImageView
+                    android:id="@+id/id11"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="fitXY"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/BookPickup" />
+
+                <ImageView
+                    android:id="@+id/id12"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/Clothes" />
+
+                <ImageView
+                    android:id="@+id/id13"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/SoftPlastic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:text="  Soft\nplastics"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/id16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-Waste"
+                android:paddingLeft="50dp"
+                android:layout_marginTop="1dp"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/id17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="50dp"
+                android:text="Clothes"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/id18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Problem\nwaste"
+                android:paddingLeft="50dp"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="57dp"
+                android:text="How It Works"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="42dp"
+            android:paddingLeft="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/id22"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/Bag" />
+
+            <ImageView
+                android:id="@+id/id23"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/BookPickup" />
+
+            <ImageView
+                android:id="@+id/id24"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/Collect" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id25"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pickup Fragment"
-        android:textSize="26sp"
-        android:layout_gravity="center" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/id26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:paddingLeft="70dp"
+            android:text="Bag your \n pickup"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/id27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:paddingLeft="40dp"
+            android:text="Book your \n pickuo "
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/id28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:paddingLeft="40dp"
+            android:text="We will \n collect it "
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/id29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id30"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:background="#E5367F"
+                android:paddingHorizontal="60.5pt"
+                android:text="Book a pick up now"
+                android:textColor="#FFFFFF"
+                android:paddingTop="12dp"
+                android:textColorHighlight="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/id32"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:paddingLeft="20dp"
+                android:src="@drawable/recycle" />
+
+            <ImageView
+                android:id="@+id/id33"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:paddingLeft="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/calendar" />
+
+            <ImageView
+                android:id="@+id/id34"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:paddingLeft="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/report" />
+
+            <ImageView
+                android:id="@+id/id35"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:paddingLeft="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/Collect" />
+
+            <ImageView
+                android:id="@+id/id36"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:paddingLeft="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/settings" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id37"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="27dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/id38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="49dp"
+            android:text="Recycle"
+            android:textColor="#000000"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/id39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            android:text="Calendar"
+            android:textColor="#000000"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/id40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pickup"
+            android:layout_marginEnd="58dp"
+            android:textColor="#000000"
+            android:textSize="8sp" />
+        <TextView
+            android:id="@+id/id41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:layout_marginEnd="55dp"
+            android:textColor="#000000"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/id42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="#000000"
+            android:textSize="8sp" />
+    </LinearLayout>
+</LinearLayout>
+
 
 </FrameLayout>
