@@ -2,6 +2,7 @@ package com.example.wastebucks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.wastebucks.databinding.ActivityMainBinding
@@ -16,6 +17,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(Home())
+
+        val actionBar = supportActionBar
+        actionBar?.apply {
+            setDisplayShowTitleEnabled(false)
+            setDisplayShowHomeEnabled(false)
+            setDisplayShowCustomEnabled(true)
+            setCustomView(R.layout.custom_actionbar)
+        }
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId) {

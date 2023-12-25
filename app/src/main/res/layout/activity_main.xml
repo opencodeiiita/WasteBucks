@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:layout="@layout/custom_actionbar"
+        android:id="@+id/action_bar"/>
+
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="0dp"
