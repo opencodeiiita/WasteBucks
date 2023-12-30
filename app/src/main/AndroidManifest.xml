@@ -12,21 +12,25 @@
         android:theme="@style/Theme.WasteBucks"
         tools:targetApi="31">
         <activity
+            android:name=".OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/SplashScreenTheme"/>
+        <activity
             android:name=".SplashScreen"
-            android:theme="@style/SplashScreenTheme"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
