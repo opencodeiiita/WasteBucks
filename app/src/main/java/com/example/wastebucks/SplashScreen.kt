@@ -17,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Executors.newSingleThreadScheduledExecutor().schedule({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, OnboardingActivity::class.java))
             overrideActivityTransition(OVERRIDE_TRANSITION_CLOSE, android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }, 3, TimeUnit.SECONDS)

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnboardingActivity"
+    android:background="#E1EBF3">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager2"
+        android:layout_centerInParent="true" />
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsColor="@color/violet"
+        app:dotsSize="10dp"
+        app:dotsSpacing="6dp"
+        app:progressMode="true"
+        app:selectedDotColor="@color/violet"
+        android:layout_above="@id/btn_next"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="Get Started"
+        android:background="@drawable/reg_btn_bg"
+        app:backgroundTint="@color/next_btn"
+        android:padding="8dp"/>
+</RelativeLayout>
