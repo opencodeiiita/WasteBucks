@@ -84,18 +84,32 @@
             <EditText
                 android:id="@+id/log_pwd"
                 android:layout_width="320dp"
-                android:inputType="textPassword"
                 android:layout_height="45dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/login_edit_text"
                 android:drawableRight="@drawable/key"
                 android:hint="Password"
-                android:layout_marginTop="50dp"
+                android:inputType="textPassword"
                 android:paddingLeft="15dp"
                 android:paddingRight="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/logemail" />
+
+
+            <TextView
+                android:id="@+id/forget_btn"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Forgot Password"
+                android:paddingRight="2dp"
+                android:textColor="@color/violet"
+                android:textAlignment="textEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/log_pwd" />
 
             <TextView
                 android:id="@+id/login_btn"
@@ -108,7 +122,7 @@
                 android:text="@string/login_ek3_string"
                 android:textSize="25dp"
                 android:textStyle="bold"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="45dp"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -151,42 +165,38 @@
                 android:gravity="center"
                 android:textSize="14sp"
                 android:layout_marginTop="10dp"
-                android:text="--------------------------------  Or login with  --------------------------------"
+                android:text="@string/or"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
                 tools:layout_editor_absoluteX="0dp" />
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="320dp"
+                android:layout_height="45dp"
+                android:background="@drawable/sign_in_bg"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="200dp"
                 android:orientation="horizontal"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv2">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/twitter" />
-
-                <ImageView
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
                     android:src="@drawable/google" />
 
-                <ImageView
-                    android:layout_width="63dp"
-                    android:layout_height="63dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/fb" />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log in with Google"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
