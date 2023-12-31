@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WasteBucks"
         tools:targetApi="31">
+
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashScreenTheme"
@@ -20,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/SplashScreenTheme"/>
         <activity
             android:name=".RegisterActivity"
             android:exported="false">

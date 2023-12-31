@@ -1,18 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">WasteBucks</string>
-
-    <string name="heading_reg">Get Started</string>
-    <string name="subheading_reg">by creating a free account</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="password_string">Password</string>
-    <string name="your_email_string">Your  Email</string>
-    <string name="or_login_with_string">Or login with</string>
-    <string name="don_t_have_an_account__sign_up_string">Don\'t have an account?</string>
-    <string name="welcome_back__string">Welcome Back!</string>
-    <string name="login_ek3_string">Login</string>
-    <string name="or">--------------------------------  Or  --------------------------------</string>
-    <string name="leaderboard_heading">LEADERBOARD</string>
     <string name="onboarding_one_subject">Join us in revolutionizing waste management and embracing eco-friendly practices. With WasteBucks, you can effortlessly categorize your waste, earn rewards, and contribute to a sustainable future.</string>
     <string name="onboarding_two_subject">Simply categorize your waste, request collection, and our nearby hubs will estimate its quality and quantity, rewarding you with points. Redeem these points for a range of eco-friendly products that we deliver straight to you!</string>
     <string name="onboarding_three_subject">Participate in community challenges, earn badges, and compete on leaderboards. Your eco-friendly actions not only benefit you but contribute to cleaner cities and a healthier planet for all.</string>
@@ -20,5 +7,4 @@
     <string name="heading_two">Convert your household waste into rewards.</string>
     <string name="heading_one">Your gateway to a greener, more rewarding lifestyle</string>
     <string name="leaderboard_str">Sweat it out, climb the ranks.</string>
-
 </resources>

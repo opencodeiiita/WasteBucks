@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.annotation.RequiresApi
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -16,10 +18,13 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        Executors.newSingleThreadScheduledExecutor().schedule({
-            startActivity(Intent(this, OnboardingActivity::class.java))
-            overrideActivityTransition(OVERRIDE_TRANSITION_CLOSE, android.R.anim.fade_in, android.R.anim.fade_out)
-            finish()
+        val executor = Executors.newSingleThreadScheduledExecutor()
+        executor.schedule({
+            Handler(Looper.getMainLooper()).post {
+                startActivity(Intent(this, OnboardingActivity::class.java))
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                finish()
+            }
         }, 3, TimeUnit.SECONDS)
 
     }
