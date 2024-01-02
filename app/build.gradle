@@ -47,7 +47,19 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:22.3.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    implementation "androidx.activity:activity-ktx:1.8.2"
+
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation "com.airbnb.android:lottie:6.0.0"
     implementation("com.tbuonomo:dotsindicator:5.0")
+
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-analytics")
+    // Also add the dependency for the Google Play services library and specify its version
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
 }
