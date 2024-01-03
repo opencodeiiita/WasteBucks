@@ -3,14 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle = "bold"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Create Your Post"/>
+
     <EditText
         android:id="@+id/editTextPost"
         android:layout_width="395dp"
-        android:layout_height="358dp"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:gravity="top|start"
+        android:paddingTop="10dp"
+        android:paddingStart="8dp"
         android:hint="Write your post here..." />
 
     <Button
@@ -18,8 +31,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextPost"
-        android:text="Upload Image"
-        android:layout_margin="16dp"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Upload Image" />
 
     <ImageView
         android:id="@+id/imageViewSelected"

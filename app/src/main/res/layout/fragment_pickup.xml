@@ -20,8 +20,8 @@
             android:text="PickUp"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:textSize="25sp"
-            android:layout_marginTop="10dp"
+            android:textSize="35sp"
+            android:layout_marginTop="15dp"
             android:textColor="@color/next_btn"
             />
 
@@ -44,7 +44,7 @@
             android:layout_marginStart="10dp"
             android:textSize="25sp"
             android:textColor="@color/black"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             />
 
         <ImageView
@@ -64,11 +64,12 @@
             android:layout_marginStart="10dp"
             android:textSize="25sp"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             />
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
     android:layout_height="wrap_content"
     android:layout_margin="3dp">
 
@@ -134,7 +135,7 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3. We'll \ncollect it"
+        android:text="3. We'll \n collect it"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
