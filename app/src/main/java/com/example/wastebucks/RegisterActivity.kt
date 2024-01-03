@@ -34,7 +34,7 @@ class RegisterActivity : AppCompatActivity() {
         supportActionBar?.hide()
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
-        //sampleopencode@gmail.com
+        //sampleopencode23@gmail.com
         //Opencode123
 
         // get input from register form
@@ -129,9 +129,6 @@ class RegisterActivity : AppCompatActivity() {
                         }
                     }
                 }
-
-
-
         }
     }
 }

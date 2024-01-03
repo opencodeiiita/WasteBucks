@@ -13,7 +13,20 @@
           "package_name": "com.example.wastebucks"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "115780088144-3scovfkeabdldo6soufn78o7563n1adu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wastebucks",
+            "certificate_hash": "344e1ccae32e4a04b79b80122b776adce066bff6"
+          }
+        },
+        {
+          "client_id": "115780088144-tbqnq68gki8c6n275rusuo150tqvq651.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBKfCbAmsusFZMVCQ-5Jc_85lICjOVs-uk"
@@ -21,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115780088144-24qdvgbmgaqm49soqpdji3q4iu1nvqm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

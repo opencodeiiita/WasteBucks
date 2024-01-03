@@ -21,4 +21,6 @@
     <string name="heading_one">Your gateway to a greener, more rewarding lifestyle</string>
     <string name="leaderboard_str">Sweat it out, climb the ranks.</string>
 
+    <string name="default_web_client_id" translatable="false">115780088144-tbqnq68gki8c6n275rusuo150tqvq651.apps.googleusercontent.com</string>
+
 </resources>
