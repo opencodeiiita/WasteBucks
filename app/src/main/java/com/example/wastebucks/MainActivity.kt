@@ -2,7 +2,9 @@ package com.example.wastebucks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.Fragment
 import com.example.wastebucks.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -11,7 +13,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
+
     //G
     private lateinit var mGoogleSignInClient: GoogleSignInClient
 
@@ -20,9 +23,17 @@ class MainActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        supportActionBar?.hide() // Hide the Action Bar
 
+        binding.leaderboardButton.setOnClickListener {
+            startActivity(android.content.Intent(this, LeaderboardActivity::class.java))
+        }
+
+        binding.shoppingButton.setOnClickListener {
+            startActivity(android.content.Intent(this, ShoppingActivity::class.java))
+        }
         replaceFragment(Home())
 
         //G
@@ -34,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId) {
+            when (it.itemId) {
                 R.id.home -> replaceFragment(Home())
                 R.id.community -> replaceFragment(Community())
                 R.id.pickup -> replaceFragment(Pickup())
