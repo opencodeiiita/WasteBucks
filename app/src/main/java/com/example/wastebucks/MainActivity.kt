@@ -3,6 +3,7 @@ package com.example.wastebucks
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatDelegate
@@ -15,8 +16,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(),  NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding : ActivityMainBinding
     //G
@@ -33,6 +35,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         supportActionBar?.hide() // Hide the Action Bar
 
         replaceFragment(Home())
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
         //G
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -53,16 +62,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             true
         }
 
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this) // Implement onNavigationItemSelected
 
-        toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav)
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+        if (FirebaseAuth.getInstance().currentUser != null) {
+
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            val userDisplayName = currentUser?.displayName
+            val userEmail = currentUser?.email
+
+            val headerView = navigationView.getHeaderView(0)
+            val nameTextView = headerView.findViewById<TextView>(R.id.name)
+            val emailTextView = headerView.findViewById<TextView>(R.id.email)
+            nameTextView.text = userDisplayName
+            emailTextView.text = userEmail
+        }
+
+
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
@@ -92,14 +108,5 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
-        } else {
-            onBackPressedDispatcher . onBackPressed()
-        }
     }
 }

@@ -15,16 +15,16 @@
         android:src="@mipmap/ic_launcher"/>
 
     <TextView
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="srtk"
         android:textColor="@color/white"
         android:textStyle="bold"/>
 
     <TextView
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="srtk@gmail.com"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:layout_marginBottom="16dp"/>
