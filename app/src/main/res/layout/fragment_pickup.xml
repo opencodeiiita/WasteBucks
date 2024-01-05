@@ -21,7 +21,7 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:textSize="35sp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/next_btn"
             />
 

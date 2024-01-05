@@ -31,6 +31,7 @@ class OnboardingActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         if (currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
         val fragmentList = arrayListOf(
