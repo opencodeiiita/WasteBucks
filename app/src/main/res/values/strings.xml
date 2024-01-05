@@ -23,4 +23,7 @@
 
     <string name="default_web_client_id" translatable="false">115780088144-tbqnq68gki8c6n275rusuo150tqvq651.apps.googleusercontent.com</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>

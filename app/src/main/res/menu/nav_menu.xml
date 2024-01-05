@@ -1,0 +1,92 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/baseline_home_24"
+            android:padding="10dp" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Profile"
+            android:icon="@drawable/baseline_account_circle_24"
+            android:padding="10dp" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings"
+            android:icon="@drawable/settings"
+            android:padding="10dp" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:title="Notifications"
+            android:icon="@drawable/notification"
+            android:padding="30dp" />
+
+        <item
+            android:id="@+id/nav_help"
+            android:title="Help"
+            android:icon="@drawable/help"
+            android:padding="10dp" />
+    </group>
+
+
+
+    <item android:title="Profile">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/logout"
+                    android:padding="10dp" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+
+
+    <item android:title="Communicate">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_contactus"
+                    android:title="Contact us"
+                    android:icon="@drawable/contactus"
+                    android:padding="10dp" />
+
+                <item
+                    android:id="@+id/nav_rate"
+                    android:title="Rate us"
+                    android:icon="@drawable/rating"
+                    android:padding="10dp" />
+
+                <item
+                    android:id="@+id/nav_about"
+                    android:title="About us"
+                    android:icon="@drawable/about"
+                    android:padding="10dp" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>
+
+
+      
