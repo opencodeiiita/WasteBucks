@@ -13,6 +13,7 @@ import com.example.wastebucks.fragments.onboarding2
 import com.example.wastebucks.fragments.onboarding3
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.wastebucks.admin.AdminScreen
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -30,8 +31,15 @@ class OnboardingActivity : AppCompatActivity() {
 
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            val userId = currentUser.uid
+            if(userId == "6seRUQZQudRevCuAxTVTzIY5Q4R2"){
+                startActivity(Intent(this, AdminScreen::class.java))
+                finish()
+            }
+            else{
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }
         }
 
         val fragmentList = arrayListOf(

@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.wastebucks.admin.AdminScreen
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -32,8 +33,15 @@ class LoginActivity : AppCompatActivity() {
     public override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
+
         if (currentUser != null) {
-            startActivity(Intent(this, MainActivity::class.java))
+            val userId = currentUser.uid
+            if(userId == "6seRUQZQudRevCuAxTVTzIY5Q4R2"){
+                startActivity(Intent(this, AdminScreen::class.java))
+            }
+            else{
+                startActivity(Intent(this, MainActivity::class.java))
+            }
         }
     }
 
@@ -153,9 +161,16 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
-                    Toast.makeText(this, "Signed in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
+                    val userId = user?.uid
+                    if(userId == "6seRUQZQudRevCuAxTVTzIY5Q4R2"){
+                        Toast.makeText(this, "Signed in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, AdminScreen::class.java))
+                        finish()
+                    }
+                    else{
+                        Toast.makeText(this, "Signed in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, MainActivity::class.java))
+                    }
                 } else {
                     Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
                 }
