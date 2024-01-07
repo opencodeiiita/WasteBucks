@@ -1,5 +1,6 @@
 package com.example.wastebucks
 
+import android.app.AlertDialog
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +53,34 @@ class LoginActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        val forgotPassword = findViewById<TextView>(R.id.forgot_password)
+        forgotPassword.setOnClickListener {
+            val dialog = AlertDialog.Builder(this)
+            dialog.setTitle("Forgot Password")
+            dialog.setMessage("Enter your email address.")
+
+            val inputField = EditText(this)
+            dialog.setView(inputField)
+
+            dialog.setPositiveButton("Send") { _, _ ->
+                val email = inputField.text.toString()
+                auth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(this, "Failed to send reset email!", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+            }
+
+            dialog.setNegativeButton("Cancel") { dialogInterface, _ ->
+                dialogInterface.cancel()
+            }
+
+            dialog.create().show()
+        }
 
         // get input from login here
         val email = findViewById<EditText>(R.id.logemail)
