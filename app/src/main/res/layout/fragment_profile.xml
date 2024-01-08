@@ -1,17 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/violet"
-    tools:context=".Profile">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile Fragment"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:textSize="26sp"
-        android:layout_gravity="center" />
+        android:letterSpacing="0.02"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginBottom="22dp"
+        android:textColor="@color/black"
+        android:text="@string/profile" />
 
-</FrameLayout>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView4"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        app:shapeAppearanceOverlay="@style/circular_image_view"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4sp"
+        android:gravity="center"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/my_name" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="170sp"
+        android:drawablePadding="4sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginBottom="25sp"
+        android:text="AndhraPradesh India"
+        app:drawableLeftCompat="@drawable/location_profile" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="175sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="56dp"
+        android:textSize="16sp"
+        android:letterSpacing="0.03"
+        android:layout_marginBottom="30sp"
+        android:backgroundTint="@color/profile_purple"
+        android:drawableEnd="@drawable/arrow_white_profile"
+        android:text="@string/edit_profile" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="145sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:layout_marginStart="20dp"
+
+                android:drawablePadding="8dp"
+                android:text="150"
+                android:textSize="22sp"
+                app:drawableLeftCompat="@drawable/stacked_points_profile" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/total_points" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="115sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="22sp"
+                android:drawablePadding="10dp"
+                android:paddingStart="8dp"
+                android:gravity="center_vertical"
+                android:text="500"
+                app:drawableLeftCompat="@drawable/reload_profile" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/total_items" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="8sp"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:text="23"
+                app:drawableLeftCompat="@drawable/exchange_icon_profile" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="13sp"
+                android:text="@string/purchased_items" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_settings"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="7sp"
+        android:layout_marginTop="7sp"
+        android:textSize="22sp"
+        android:letterSpacing="0.01"
+        android:drawablePadding = "20sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:paddingEnd="30sp"
+        android:paddingStart="30dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/settings"
+        app:drawableRightCompat="@drawable/arrow_forward_profile"
+        app:drawableLeftCompat="@drawable/settings_profile" />
+
+    <TextView
+        android:id="@+id/tv_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="7sp"
+        android:layout_marginTop="7sp"
+        android:textSize="22sp"
+        android:letterSpacing="0.01"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:drawablePadding = "20sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/contacts"
+        app:drawableLeftCompat="@drawable/contact_profile"
+        app:drawableRightCompat="@drawable/arrow_forward_profile" />
+
+    <TextView
+        android:id="@+id/tv_general"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="7sp"
+        android:layout_marginTop="7sp"
+        android:textSize="22sp"
+        android:letterSpacing="0.01"
+        android:drawablePadding = "20sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:paddingEnd="30dp"
+        android:paddingStart="30sp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/general"
+        app:drawableLeftCompat="@drawable/settings_profile"
+        app:drawableRightCompat="@drawable/arrow_forward_profile" />
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="7sp"
+        android:layout_marginTop="7sp"
+        android:textSize="22sp"
+        android:drawablePadding = "20sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:paddingEnd="30sp"
+        android:paddingStart="30sp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/about_app"
+        app:drawableLeftCompat="@drawable/info_profile"
+        app:drawableRightCompat="@drawable/arrow_forward_profile" />
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="7sp"
+        android:layout_marginTop="7sp"
+        android:textSize="22sp"
+        android:letterSpacing="0.01"
+        android:drawablePadding = "20sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:paddingEnd="30dp"
+        android:paddingStart="30sp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/log_out"
+        app:drawableLeftCompat="@drawable/logout_profile"
+        app:drawableRightCompat="@drawable/arrow_forward_profile" />
+
+
+</LinearLayout>
