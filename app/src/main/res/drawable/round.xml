@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Normal state -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/profile_purple" /> <!-- Set your desired background color -->
+            <corners android:radius="50dp" /> <!-- Set a large radius to make it circular -->
+        </shape>
+    </item>
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/profile_purple" /> <!-- Set your desired pressed state color -->
+            <corners android:radius="50dp" />
+        </shape>
+    </item>
+</selector>
