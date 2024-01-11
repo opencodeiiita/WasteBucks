@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookPickup">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Book Pickup"
+            android:textColor="@color/next_btn"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Please select the items you would like to recycle:\n(in kilograms)"
+            android:textColor="@color/next_btn"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPlasticSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewSubTitle"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/green_rounded_rectangle"
+                android:padding="10dp"
+                android:src="@drawable/img_1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plastics"
+                    android:textColor="@color/next_btn"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plastics cause a lot of damage to the environment. They are non-biodegradable."
+                    android:textColor="@color/next_btn"
+                    android:textSize="16sp" />
+
+                <com.travijuu.numberpicker.library.NumberPicker
+                    android:id="@+id/numberPickerPlastic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCardboardSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutPlasticSelection"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/green_rounded_rectangle"
+                android:padding="10dp"
+                android:src="@drawable/img_2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardboards"
+                    android:textColor="@color/next_btn"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardboards are used for packaging. They are eco-friendly and can be reused."
+                    android:textColor="@color/next_btn"
+                    android:textSize="16sp" />
+
+                <com.travijuu.numberpicker.library.NumberPicker
+                    android:id="@+id/numberPickerCardboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMetalSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutCardboardSelection"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/green_rounded_rectangle"
+                android:padding="10dp"
+                android:src="@drawable/img_3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Metals"
+                    android:textColor="@color/next_btn"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Metals are highly recyclable materials that can be reused for various applications."
+                    android:textColor="@color/next_btn"
+                    android:textSize="16sp" />
+
+                <com.travijuu.numberpicker.library.NumberPicker
+                    android:id="@+id/numberPickerMetal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutMetalSelection"
+            android:layout_marginTop="5dp"
+            android:text="Please enter your address:"
+            android:textColor="@color/next_btn"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewAddress"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/green_rounded_rectangle"
+            android:hint="Enter your address"
+            android:padding="10dp"
+            android:textColor="@color/next_btn"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonBookPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextAddress"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/green_rounded_rectangle"
+            android:padding="10dp"
+            android:text="Book Pickup"
+            android:textColor="@color/next_btn"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</ScrollView>
