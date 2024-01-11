@@ -28,20 +28,6 @@ class OnboardingActivity : AppCompatActivity() {
         supportActionBar?.hide()
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
-
-        val currentUser = auth.currentUser
-        if (currentUser != null) {
-            val userId = currentUser.uid
-            if(userId == "6seRUQZQudRevCuAxTVTzIY5Q4R2"){
-                startActivity(Intent(this, AdminScreen::class.java))
-                finish()
-            }
-            else{
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
-        }
-
         val fragmentList = arrayListOf(
             onboarding1(),
             onboarding2(),
