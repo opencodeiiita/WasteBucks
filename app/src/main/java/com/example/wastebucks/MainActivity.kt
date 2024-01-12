@@ -16,6 +16,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.wastebucks.databinding.ActivityMainBinding
+import com.example.wastebucks.fragments.AboutUs
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -109,6 +110,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_about -> {
                     Toast.makeText(applicationContext, "About clicked", Toast.LENGTH_SHORT).show()
                     drawerLayout.closeDrawer(GravityCompat.START)
+                    openAboutFragment()
                     true
                 }
                 else -> false
@@ -148,6 +150,12 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+
+    private fun openAboutFragment() {
+        val aboutFragment = AboutUs()
+        replaceFragment(aboutFragment)
+    }
+
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
