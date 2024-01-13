@@ -38,5 +38,9 @@
     <string name="about_app">About_App</string>
     <string name="log_out">Log_out</string>
 
+    <string name="nameString">Name <font color="#FF0000"><b>*</b></font></string>
+    <string name="emailString">Email <font color="#FF0000"><b>*</b></font></string>
+    <string name="msgString">Message<font color="#FF0000"><b>*</b></font></string>
+
 
 </resources>

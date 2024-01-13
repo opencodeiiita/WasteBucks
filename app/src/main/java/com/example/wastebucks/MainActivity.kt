@@ -17,6 +17,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.wastebucks.databinding.ActivityMainBinding
 import com.example.wastebucks.fragments.AboutUs
+import com.example.wastebucks.fragments.ContactUs
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -100,6 +101,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_contactus -> {
                     Toast.makeText(applicationContext, "Contact us clicked", Toast.LENGTH_SHORT).show()
                     drawerLayout.closeDrawer(GravityCompat.START)
+                    openContactFragment()
                     true
                 }
                 R.id.nav_rate -> {
@@ -156,6 +158,10 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(aboutFragment)
     }
 
+    private fun openContactFragment() {
+        val contactFragment = ContactUs()
+        replaceFragment(contactFragment)
+    }
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
