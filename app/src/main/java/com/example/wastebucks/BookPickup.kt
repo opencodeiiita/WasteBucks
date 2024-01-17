@@ -1,5 +1,7 @@
 package com.example.wastebucks
 
+import android.app.Dialog
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.travijuu.numberpicker.library.NumberPicker
@@ -16,12 +20,14 @@ class BookPickup : Fragment() {
 
     private lateinit var db: FirebaseFirestore
 
+    private lateinit var dialog: Dialog
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.activity_book_pickup, container, false)
+
 
         db = FirebaseFirestore.getInstance()
 
@@ -63,6 +69,22 @@ class BookPickup : Fragment() {
                 .add(order)
                 .addOnSuccessListener { documentReference ->
                     Toast.makeText(context, "Pickup successfully booked! Your pickupId is: ${documentReference.id}", Toast.LENGTH_LONG).show()
+                    // Create the Dialog here
+                    dialog = Dialog(requireContext())
+                    dialog.setContentView(R.layout.custom_dialog_layout)
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        dialog.window?.setBackgroundDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.custom_dialog_background))
+                    }
+                    dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                    dialog.setCancelable(false) // Optional
+                    dialog.window?.attributes?.windowAnimations = R.style.DialogAnimation // Setting the animations to dialog
+
+                    val okayButton: Button = dialog.findViewById(R.id.btn_okay)
+
+                    okayButton.setOnClickListener {
+                        dialog.dismiss()
+                    }
+                    dialog.show()
                     val fragment = Home()
                     val transaction = requireActivity().supportFragmentManager.beginTransaction()
                     transaction.replace(R.id.frame_layout, fragment)
@@ -73,7 +95,6 @@ class BookPickup : Fragment() {
                     println("Error adding document: $e")
                 }
         }
-
         return view
     }
 }

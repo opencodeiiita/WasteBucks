@@ -8,25 +8,11 @@
     android:orientation="vertical"
     tools:context=".Profile">
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="26sp"
-        android:layout_marginTop="5dp"
-        android:letterSpacing="0.02"
-        android:fontFamily="@font/inter_semibold"
-        android:layout_marginBottom="22dp"
-        android:textColor="@color/black"
-        android:text="@string/Profile" />
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView4"
         android:layout_width="140sp"
         android:layout_height="140sp"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="15dp"
         app:shapeAppearanceOverlay="@style/circular_image_view"
@@ -41,35 +27,35 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:fontFamily="@font/inter_semibold"
-        android:text="@string/black_hat_coder" />
+        android:text="   " />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/myButton"
         android:layout_width="wrap_content"
         android:layout_height="48sp"
-        android:paddingBottom="16dp"
+        android:padding="5dp"
         android:textSize="16sp"
         android:layout_gravity="center"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/location_profile"
         android:text="AndhraPradesh India"
         android:textColor="@color/gray_600"
-        app:cornerRadius="10dp"
-        />
+        app:cornerRadius="10dp" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="175sp"
+        android:layout_width="180dp"
         android:layout_height="56dp"
         android:layout_gravity="center"
         android:layout_marginBottom="30sp"
         android:layout_marginTop="12dp"
+        android:textAllCaps="false"
         android:backgroundTint="@color/profile_purple"
         android:drawableEnd="@drawable/arrow_white_profile"
         android:gravity="center"
         android:letterSpacing="0.03"
         android:text="@string/edit_profile"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,6 +65,7 @@
 
         <LinearLayout
             android:layout_width="145sp"
+            android:layout_marginLeft="20dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -157,7 +144,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
-
                 android:fontFamily="@font/inter_semibold"
                 android:textSize="13sp"
                 android:text="@string/purchased_items" />
@@ -245,13 +231,13 @@
         android:letterSpacing="0.01"
         android:drawablePadding = "20sp"
         android:gravity="center_vertical"
-        android:textColor="@color/black"
+        android:textColor="#E53935"
         android:paddingEnd="30dp"
         android:paddingStart="30sp"
         android:fontFamily="@font/inter_semibold"
         android:text="@string/log_out"
         android:drawableLeft="@drawable/logout_profile"
-        android:drawableRight="@drawable/arrow_forward_profile" />
+        android:drawableRight="@drawable/arrow_forward" />
 
 
 </LinearLayout>

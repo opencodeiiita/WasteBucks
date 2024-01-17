@@ -6,62 +6,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="#40CBC5C5"
-    tools:context=".fragments.ContactUs">
+    tools:context=".ContactUs">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageButton
+            android:id="@+id/back"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_marginTop="6dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/contactus_arrow"
-            android:background="@drawable/white_background"
-            />
+            android:background="@drawable/white_background" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:text="Contact Us"
-            android:textSize="28sp"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:fontFamily="@font/courier_prime_bold"
             android:textColor="#000000"/>
-        <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="90dp"
-            android:src="@drawable/contact2"/>
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/contactus_search"/>
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:src="@drawable/contact"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:elevation="20dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginStart="20dp">
+            app:cardCornerRadius="10dp">
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
@@ -84,7 +74,7 @@
             android:layout_height="80dp"
             android:elevation="20dp"
             app:cardCornerRadius="10dp"
-            android:layout_marginStart="70dp">
+            android:layout_marginStart="55dp">
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
@@ -106,7 +96,8 @@
             android:layout_height="80dp"
             android:elevation="20dp"
             app:cardCornerRadius="10dp"
-            android:layout_marginStart="60dp">
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="55dp">
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
@@ -138,29 +129,34 @@
             android:text="QUICK CONTACT"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:fontFamily="@font/courier_prime_bold"/>
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nameString"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"/>
+
         <EditText
+            android:id="@+id/name"
             android:layout_width="380dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:elevation="10dp"
+            android:elevation="5dp"
             android:background="@drawable/white_background"
             android:textColorHint="#7D7D7D"
             android:padding="10dp"
+            android:maxHeight="50dp"
+            android:inputType="text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:hint="Enter Full Name Here"/>
 
         <TextView
@@ -174,15 +170,20 @@
             android:layout_marginBottom="10dp"
             android:textStyle="bold"/>
         <EditText
+            android:id="@+id/email"
             android:layout_width="380dp"
             android:layout_height="50dp"
             android:textColorHint="#7D7D7D"
             android:layout_gravity="center"
-            android:elevation="10dp"
+            android:maxHeight="50dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:elevation="5dp"
             android:background="@drawable/white_background"
             android:hint="Enter Email Address"
-            android:padding="10dp"
-            />
+            android:padding="10dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,27 +194,32 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:textStyle="bold"/>
+
         <EditText
+            android:id="@+id/msg"
             android:layout_width="380dp"
             android:layout_height="50dp"
             android:textColorHint="#7D7D7D"
             android:layout_gravity="center"
             android:padding="10dp"
-            android:elevation="10dp"
+            android:elevation="5dp"
+            android:inputType="text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/white_background"
             android:hint="Enter Message"/>
 
 
         <Button
-            android:layout_width="100dp"
+            android:id="@+id/submit"
+            android:layout_width="120dp"
             android:layout_height="50dp"
-            android:text="Submit ➞"
+            android:text="SUBMIT"
             android:textAllCaps="false"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="#008746"
-            android:textSize="13.1sp"
-            />
+            android:textSize="15sp"/>
     </LinearLayout>
 
 

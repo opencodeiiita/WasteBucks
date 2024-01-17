@@ -21,4 +21,5 @@
         android:id="@+id/profile"
         android:icon="@drawable/baseline_person_24"
         tools:ignore="HardcodedText" />
+
 </menu>

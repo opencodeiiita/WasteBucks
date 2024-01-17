@@ -120,6 +120,7 @@ class RegisterActivity : AppCompatActivity() {
                     hashMap["name"] = name
                     hashMap["profileImage"] = ""
                     hashMap["userType"] = "user"
+                    hashMap["points"] = "0"
                     hashMap["timestamp"] = timestamp
 
                     val ref = FirebaseDatabase.getInstance().getReference("Users")

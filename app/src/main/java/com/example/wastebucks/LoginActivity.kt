@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
 
         val loginButton = findViewById<TextView>(R.id.login_btn)
 
-        //G
+        //Google
         val signInButton = findViewById<LinearLayout>(R.id.linearLayout3)
         signInButton.setOnClickListener {
             signIn()
@@ -223,6 +223,7 @@ class LoginActivity : AppCompatActivity() {
                     hashMap["name"] = user?.displayName.toString()
                     hashMap["profileImage"] = ""
                     hashMap["userType"] = "user"
+                    hashMap["points"] = "0"
                     hashMap["timestamp"] = timestamp
 
                     val ref = FirebaseDatabase.getInstance().getReference("Users")
@@ -238,7 +239,8 @@ class LoginActivity : AppCompatActivity() {
                             progressDialog.dismiss()
                             Toast.makeText(this, "SignIn Failed", Toast.LENGTH_SHORT).show()
                         }
-                } else {
+                }
+                else {
                     Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
                 }
             }

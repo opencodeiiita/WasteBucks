@@ -7,6 +7,15 @@
     android:padding="10dp"
     tools:context=".RateUs">
 
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/contactus_arrow"
+        android:background="@drawable/back_btn" />
+
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
@@ -17,7 +26,7 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="280dp"
             android:layout_gravity="center"
             android:src="@drawable/ratusimage" />
 
@@ -40,38 +49,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:src="@drawable/star" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:src="@drawable/star" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:src="@drawable/star" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:src="@drawable/star" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:src="@drawable/star" />
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1"
+            android:progressTint="@color/golden"/>
     </LinearLayout>
 
     <TextView
@@ -81,13 +68,13 @@
         android:layout_below="@+id/linearLayout2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Perfection!"
+        android:text="       "
         android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="30dp"
         android:gravity="center"
@@ -99,7 +86,7 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="10dp"
         android:gravity="center"
@@ -108,7 +95,5 @@
         android:textColor="#3b83ff"
         android:textSize="24sp"
         android:paddingVertical="10dp"/>
-
-
 
 </RelativeLayout>

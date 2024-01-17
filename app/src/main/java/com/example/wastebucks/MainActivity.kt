@@ -5,24 +5,26 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ImageButton
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.wastebucks.databinding.ActivityMainBinding
-import com.example.wastebucks.fragments.AboutUs
-import com.example.wastebucks.fragments.ContactUs
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,12 +58,37 @@ class MainActivity : AppCompatActivity() {
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
+
         drawerLayout.addDrawerListener(toggle)
         toggle.drawerArrowDrawable.color = ContextCompat.getColor(this, android.R.color.white)
 
 
+        val auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
+        val uid = currentUser?.uid
+        val userRef = FirebaseDatabase.getInstance().getReference("Users").child(uid.toString())
 
-        val navigationView = findViewById<NavigationView>(R.id.nav_view)
+        val navigationView: NavigationView = findViewById(R.id.nav_view)
+        val headerView: View = navigationView.getHeaderView(0)
+        val navHeaderName: TextView = headerView.findViewById(R.id.name_nav)
+        val navHeaderEmail: TextView = headerView.findViewById(R.id.email_nav)
+
+        userRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    val userName = snapshot.child("name").value.toString()
+                    val userEmail = snapshot.child("email").value.toString()
+                    navHeaderName.text = userName
+                    navHeaderEmail.text = userEmail
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@MainActivity, "Failed to retrieve user data", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+
+
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
@@ -99,20 +126,21 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_contactus -> {
-                    Toast.makeText(applicationContext, "Contact us clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@MainActivity, ContactUs::class.java)
+                    startActivity(intent)
                     drawerLayout.closeDrawer(GravityCompat.START)
-                    openContactFragment()
                     true
                 }
                 R.id.nav_rate -> {
-                    Toast.makeText(applicationContext, "Rate clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@MainActivity, RateUs::class.java)
+                    startActivity(intent)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.nav_about -> {
-                    Toast.makeText(applicationContext, "About clicked", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@MainActivity, AboutUs::class.java)
+                    startActivity(intent)
                     drawerLayout.closeDrawer(GravityCompat.START)
-                    openAboutFragment()
                     true
                 }
                 else -> false
@@ -131,7 +159,7 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(Home())
 
 
-        //G
+        //Google
         mAuth = FirebaseAuth.getInstance()
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -151,16 +179,6 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-    }
-
-    private fun openAboutFragment() {
-        val aboutFragment = AboutUs()
-        replaceFragment(aboutFragment)
-    }
-
-    private fun openContactFragment() {
-        val contactFragment = ContactUs()
-        replaceFragment(contactFragment)
     }
 
     private fun replaceFragment(fragment: Fragment) {

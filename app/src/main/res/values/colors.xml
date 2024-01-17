@@ -23,4 +23,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="topInLeaderboard">#42aba4</color>
     <color name="generalLeaderboardItem">#b4c2ce</color>
+    <color name="golden">#FFB300</color>
 </resources>
